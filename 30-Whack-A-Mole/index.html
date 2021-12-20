@@ -67,7 +67,7 @@
             setTimeout(() => timeUp = true, 10000)
         }
         function bonk(e) {
-            if (!e.isTrusted) return;//cheater
+            if (!e.isTrusted) return;
             score++;
             this.parentNode.classList.remove('up');
             scoreBoard.testContent = score;
