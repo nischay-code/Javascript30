@@ -26,6 +26,7 @@
 
         function findMatches(wordToMatch, cities) {
             return cities.filter(place => {
+                // here we need to figure out if the city or state matches what was searched
                 const regex = new RegExp(wordToMatch, 'gi');
                 return place.city.match(regex) || place.state.match(regex)
             });
@@ -50,11 +51,13 @@
             }).join('');
             suggestions.innerHTML = html;
         }
+
         const searchInput = document.querySelector('.search');
-        const suggestion = document.querySelector('suggestions');
+        const suggestions = document.querySelector('.suggestions');
 
         searchInput.addEventListener('change', displayMatches);
         searchInput.addEventListener('keyup', displayMatches);
+
     </script>
 </body>
 
