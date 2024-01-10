@@ -11,7 +11,7 @@
     <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
     <script>
-        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+        const bunnys = [{ name: 'Hey', age: 2 }, { name: 'Bye', age: 8 }];
 
         function makeGreen() {
             const p = document.querySelector('p');
@@ -40,37 +40,37 @@
 
         console.clear();
 
-        dogs.forEach(dog => {
-            console.groupCollapsed(`${dog.name}`);
-            console.log(`This is ${dog.name}`);
-            console.log(`${dog.name} is ${dog.age} years old`);
-            console.log(`${dog.name} is ${dog.age * 7} dog years old`);
-            console.groupEnd(`${dog.name}`);
+        bunnys.forEach(bunny => {
+            console.groupCollapsed(`${bunny.name}`);
+            console.log(`This is ${bunny.name}`);
+            console.log(`${bunny.name} is ${bunny.age} years old`);
+            console.log(`${bunny.name} is ${bunny.age * 7} years old`);
+            console.groupEnd(`${bunny.name}`);
         });
 
 
-        console.count('Wes');
-        console.count('Wes');
-        console.count('Steve');
-        console.count('Steve');
-        console.count('Wes');
-        console.count('Steve');
-        console.count('Wes');
-        console.count('Steve');
-        console.count('Steve');
-        console.count('Steve');
-        console.count('Steve');
-        console.count('Steve');
+        console.count('nischay');
+        console.count('nischay');
+        console.count('bunny');
+        console.count('bunny');
+        console.count('nischay');
+        console.count('bunny');
+        console.count('nischay');
+        console.count('bunny');
+        console.count('bunny');
+        console.count('bunny');
+        console.count('bunny');
+        console.count('bunny');
 
         console.time('fetching data');
-        fetch('https://api.github.com/users/wesbos')
+        fetch('https://api.github.com/users/nischay-code')
             .then(data => data.json())
             .then(data => {
                 console.timeEnd('fetching data');
                 console.log(data);
             });
 
-        console.table(dogs);
+        console.table(bunnys);
 
     </script>
 </body>
